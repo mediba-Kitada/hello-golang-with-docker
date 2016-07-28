@@ -1,0 +1,15 @@
+# Backup files
+*~
+# Temporary files
+## vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+## golang
+src/github.com/
+src/gopkg.in/
+pkg/
+bin/
+src/golang.org/
