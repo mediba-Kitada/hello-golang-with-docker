@@ -17,7 +17,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // テンプレートのコンパイル
-var t = template.Must(template.ParseFiles("index.html")) // Must()関数でエラー時にパニックを発生させる(一度コンパイルを確認できたテンプレートであれば毎回エラー処理をする必要性は低い)
+var t = template.Must(template.ParseFiles("assets/index.html")) // Must()関数でエラー時にパニックを発生させる(一度コンパイルを確認できたテンプレートであれば毎回エラー処理をする必要性は低い)
 
 func PersonHandler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close() // 処理の最後に必ずBodyを閉じる
