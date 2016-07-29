@@ -34,7 +34,7 @@ $ cd /path/to/hello-golang-with-docker
 $ docker-compose up
 
 # 停止(コンテナのプロセスをkill)
-$ 
+$ Ctlキー + fキー
 
 # 停止(DockerのAPIを利用)
 $ docker-compose stop
