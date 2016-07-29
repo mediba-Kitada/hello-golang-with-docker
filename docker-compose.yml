@@ -1,0 +1,33 @@
+##
+## Goを用いたWebアプリケーション開発環境構成ファイル
+##
+
+version: '2'
+services:
+  # WEB/Appサーバの設定
+  web-appserver:
+    container_name: go-container
+    build: ./golang
+    ports:
+        - "80:8080"
+    links:
+      - "dbserver:mysql"
+          
+  # DBサーバの設定
+  dbserver:
+    container_name: db-container
+    build: ./mysql-server
+    volumes_from:
+      - dataonly
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "sample"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+
+  # ストレージの設定
+  dataonly:
+    container_name: db-storage-container
+    image: busybox
+    volumes:
+      - /var/lin/mysql

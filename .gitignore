@@ -1,6 +1,7 @@
 # Backup files
 *~
 # Temporary files
+trace-ascii.log
 ## vim
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
@@ -8,8 +9,8 @@
 Session.vim
 .netrwhist
 ## golang
-src/github.com/
-src/gopkg.in/
-pkg/
-bin/
-src/golang.org/
+golang/main
+golang/persona
+golang/pkg/
+golang/bin/
+vendor/
